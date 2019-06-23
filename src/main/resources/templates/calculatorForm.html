@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Cześć
+<hr>
+<form action="/calculate">
+    <input type="text"
+           placeholder="Wpisz działanie (tylko dodawanie działa)"
+               name="inputText">
+    <button>Ślij</button>
+</form>
+
+<hr>
+<h1 th:text="'Wynik: '+${yyy}"></h1>
+<hr>
+<ul>
+    <li th:each="item : ${results}" th:text="${item.inputText}"></li>
+</ul>
+
+</body>
+</html>
